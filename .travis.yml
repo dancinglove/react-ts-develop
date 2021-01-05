@@ -1,0 +1,26 @@
+# language: node_js
+# node_js:
+#  - "14"
+# install: npm install
+# script:  npm test 
+language: node_js # 语言是node
+node_js: 
+    - '14'  # 版本是14
+install:
+  - npm install # 只想install
+# script:
+#  - hexo g
+after_script:
+  - cd ./dist # 打包的东西早dist目录
+  - git init //
+  - git config user.name "dancinglove" # git 用户名
+  - git config user.email "759467654@qq.com" # git 邮箱
+  - git add -A
+  - git commit -m "Update documents"
+  # gh-pages 是写死的，任何一个网站都对应一个分支
+  # GH_TOKEN token 4bd00b36bab3895e53179c9d600464223cad9653
+  # GH_REF git地址 github.com/dancinglove/react-ts-develop
+  - git push --force  "https://${GH_TOKEN}@${GH_REF}" "master:gh-pages"
+branches:
+  only:
+    - master
