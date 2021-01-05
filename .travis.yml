@@ -21,7 +21,7 @@ after_script:
   # gh-pages 是写死的，任何一个网站都对应一个分支
   # GH_TOKEN token 4bd00b36bab3895e53179c9d600464223cad9653
   # GH_REF git地址 github.com/dancinglove/react-ts-develop
-  - git push --force  "https://${GH_TOKEN}@${GH_REF}" "master:gh-pages"
+  - git push --force  "https://${GH_TOKEN}@github.com/dancinglove/react-ts-develop" "master:gh-pages"
 branches:
   only:
-    - master
+    - main

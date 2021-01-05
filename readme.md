@@ -19,24 +19,28 @@ conventional-changelog-cli可以从git metadata生成变更日志
 需要使用validate-commit-msg工具
 统一changelog文档信息生成
 使用conventional-changelog-cli工具
-
+```
 ### cnpm i commitizen  validate-commit-msg conventional-changelog-cli -D
 ### commitizen init cz-conventional-changelog --save --save-exact
 ### git cz
+```
 
 # 支持React
+```
 ### cnpm i react react-dom @types/react @types/react-dom react-router-dom @types/react-router-dom   -S
 ### cnpm i webpack webpack-cli webpack-dev-server html-webpack-plugin hoist-non-react-statics -D
 ### cnpm i typescript ts-loader source-map-loader -D
 ### cnpm i redux react-redux @types/react-redux redux-thunk  redux-logger @types/redux-logger -S
 ### cnpm i connected-react-router -S 
-
+```
 // 新项目 就可以不实用babel 使用 ts-loader 就可以了
 
 # 代码检查
+```
 ### cnpm i eslint typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin --save-dev
 
 ### 添加配置文件 .eslintrc.js 然后在保存的时候就会自动的格式化
+```
 ```
 module.exports = {
     "parser":"@typescript-eslint/parser",
@@ -58,14 +62,17 @@ module.exports = {
 
 
 # 单元测试
+```
 ### npm i jest @types/jest ts-jest -D
 ### npx ts-jest config:init   // 初始化会生成一个 jest.config.js 
-
+```
 
 
 
 
 # 持续集成
+```
 ### Travis CI 提供的是持续集成服务（Continuous Integration，简称 CI）。它绑定 Github 上面的项目，只要有新的代码，就会自动抓取。然后，提供一个运行环境，执行测试，完成构建，还能部署到服务器
 ### 持续集成指的是只要代码有变更，就自动运行构建和测试，反馈运行结果。确保符合预期以后，再将新代码集成到主干
-### 持续集成的好处在于，每次代码的小幅变更，就能看到运行结果，从而不断累积小的变更，而不是在开发周期结束时，一下子合并一大块代码
+#### 持续集成的好处在于，每次代码的小幅变更，就能看到运行结果，从而不断累积小的变更，而不是在开发周期结束时，一下子合并一大块代码
+```
